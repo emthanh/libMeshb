@@ -7,18 +7,18 @@ matrix:
   include:
     # Ubuntu Trusty, Xenial and Bionic
     - dist: trusty
-    before_script : cmake -DCMAKE_INSTALL_PREFIX=$HOME/local ../
+      before_script : cmake -DCMAKE_INSTALL_PREFIX=$HOME/local ../
 
     - dist: bionic
-    before_script : cmake -DCMAKE_INSTALL_PREFIX=$HOME/local ../
+      before_script : cmake -DCMAKE_INSTALL_PREFIX=$HOME/local ../
 
     # MacOs
     - os: osx
-    before_script : cmake -DCMAKE_INSTALL_PREFIX=$HOME/local ../
+      before_script : cmake -DCMAKE_INSTALL_PREFIX=$HOME/local ../
 
     # Windows
     - os: windows
-    before_script : cmake -DCMAKE_INSTALL_PREFIX=%HOMEPATH%\local ..\
+      before_script : cmake -DCMAKE_INSTALL_PREFIX=%HOMEPATH%\local ..\
 
 install: 
   - mkdir build
