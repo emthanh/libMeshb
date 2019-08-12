@@ -17,10 +17,10 @@ matrix:
       before_script : cmake -DCMAKE_INSTALL_PREFIX=$HOME/local ../
 
     # Windows
+    # run on git-bash the script bash
+    # differ from documentation 'cmake -DCMAKE_INSTALL_PREFIX=%HOMEPATH%\local ..\'
     - os: windows
-      before_script :
-        - cd ..
-        - cmake -DCMAKE_INSTALL_PREFIX=%HOMEPATH%\local .
+      before_script : cmake -DCMAKE_INSTALL_PREFIX=$HOMEPATH/local ../
 
 install: 
   - mkdir build
