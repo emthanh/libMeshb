@@ -18,7 +18,9 @@ matrix:
 
     # Windows
     - os: windows
-      before_script : cmake -DCMAKE_INSTALL_PREFIX=%HOMEPATH%\local ..\
+      before_script :
+        - cd ..
+        - cmake -DCMAKE_INSTALL_PREFIX=%HOMEPATH%\local .
 
 install: 
   - mkdir build
